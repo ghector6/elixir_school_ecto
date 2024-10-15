@@ -10,5 +10,6 @@ defmodule Friends.Person do
     struct
     |> cast(params, [:name, :age])
     |> validate_required([:name])
+    |> validate_length(:name, min: 2)
   end
 end
